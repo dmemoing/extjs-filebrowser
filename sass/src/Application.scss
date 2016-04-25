@@ -1,0 +1,91 @@
+.folderUp {
+  background-image: url(images/folder_up2.png) !important;
+}
+
+/*----------------codemirror----------------*/
+.CodeMirror {
+	border: 1px solid #eee;
+	height: auto;
+}
+
+.CodeMirror pre {
+	font-size: 11pt;
+	font-family: Consolas;
+}
+
+/*-----------------DATAVIEW-------------------*/
+
+.browser-view .x-panel-body{
+	background: white;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+.browser-view .thumb{
+	background: #FFFFFF;
+	padding: 3px;
+	padding-bottom: 0;
+}
+.x-quirks .browser-view .thumb {
+    padding-bottom: 3px;
+}
+.browser-view .thumb img{
+	height: 64px;
+	width: 64px;
+}
+.browser-view .thumb-wrap{
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+}
+.browser-view .thumb-wrap span{
+	display: block;
+	white-space: nowrap;
+	overflow: hidden !important;
+	text-align: center;
+    width: 64px;
+}
+
+.browser-view .x-item-over{
+    border:1px solid #dddddd;
+    background: #efefef repeat-x left top;
+    padding: 4px;
+}
+
+.browser-view .x-item-selected{
+    background: #eff5fb no-repeat right bottom;
+    border:1px solid #99bbe8;
+    padding: 4px;
+}
+.browser-view .x-item-selected .thumb{
+	background:transparent;
+}
+
+.browser-view .loading-indicator {
+	font-size:11px;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+	margin:10px;
+}
+
+.x-view-selector {
+    position:absolute;
+    left:0;
+    top:0;
+    width:0;
+    border:1px dotted;
+    opacity: .5;
+    -moz-opacity: .5;
+    filter:alpha(opacity=50);
+    zoom:1;
+    background-color:#c3daf9;
+    border-color:#3399bb;
+}
+
+.ext-strict .ext-ie .x-tree .x-panel-bwrap{
+    position:relative;
+    overflow:hidden;
+}
+.x-editable {
+    color: #000;
+}
