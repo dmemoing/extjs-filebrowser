@@ -106,7 +106,7 @@ move:
 ```json
 {
     "cmd": "update",
-    "content": "the content of the whole file"
+    "content": "the content of the whole file",
     "path": "localfolder/index.php"
 }
 ```
