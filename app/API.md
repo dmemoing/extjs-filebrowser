@@ -1,4 +1,4 @@
-## extjs-filemanager API docs [multiple file support]
+## extjs-filemanager API docs
 
 
 > *The root directory must name ``localfolder``*
