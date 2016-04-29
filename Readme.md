@@ -2,7 +2,7 @@
 
 A simple filemanager to manage your files in the browser developed in ``ExtJS`` and ``CodeMirror`` by dmemoing.
 
-#### [Try the DEMO](http://angular-filemanager.zendelsolutions.com/)
+#### [Try the DEMO](http://dmemoing.github.io/extjs-filebrowser/build/FileBrowser/)
 
 ![](resources/images/1.png)
 ![](resources/images/2.png)
