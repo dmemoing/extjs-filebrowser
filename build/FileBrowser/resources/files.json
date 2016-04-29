@@ -1,0 +1,8 @@
+[
+	{ text: "homework", leaf:false, path: "localfolder/homework"},
+	{ text: "tickets", leaf: false ,path: "localfolder/tickets"},
+	{ text: "detention.js", leaf: true,path: "localfolder/detention.js"},
+	{ text: "index.html", leaf: true,path: "localfolder/index.html"}
+]
+
+
