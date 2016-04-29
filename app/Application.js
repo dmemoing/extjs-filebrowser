@@ -27,13 +27,13 @@ Ext.define('FileBrowser.Application', {
             items: [{
                 xtype: 'filebrowser',
                 address: {
-                    urlGet: 'resources/files.json',
+                    urlGet: serverAddress+'fss/directory',
                     urlNewFile: serverAddress+'fss/file',
                     urlNewDirectory: serverAddress+'fss/directory',
                     urlRename: serverAddress+'fss/directory',
                     urlDelete: serverAddress+'fss/directory',
                     urlCpmv: serverAddress+'fss/cpmv',
-                    urlViewFile: 'resources/newfile.html',
+                    urlViewFile: serverAddress+'fss/file',
                     urlSave: serverAddress+'fss/file'
                 }
             }]
