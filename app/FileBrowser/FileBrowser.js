@@ -107,6 +107,7 @@ Ext.define('FileBrowser.FileBrowser.FileBrowser',{
 
     onItemclick: function(view, selectedItem){
         var urlSave = this.up('filebrowser').address.urlSave;
+        var urlViewFile = this.up('filebrowser').address.urlViewFile;
         var tabs = this.up('filebrowser').down('tabpanel');
         
         if(!selectedItem.data.leaf){
@@ -122,7 +123,7 @@ Ext.define('FileBrowser.FileBrowser.FileBrowser',{
             tabId = tabId.replace(/[ \/\.]/g,'');
             var tab = tabs.getComponent(tabId);
             if(!tab){
-                var vartext = this.up('filebrowser').loadFile(selectedItem.data.path);
+            //    var vartext = this.up('filebrowser').loadFile(selectedItem.data.path);
                 var language = this.up('filebrowser').languageName(selectedItem.data.text);
                 var codearea = Ext.create({
                     xtype: 'codeArea',
@@ -158,14 +159,31 @@ Ext.define('FileBrowser.FileBrowser.FileBrowser',{
                         }
                     }
                 });
-                vartext.then(function(response){
+                Ext.Ajax.request({
+                    url: urlViewFile +'?cmd=view&path='+selectedItem.data.path,
+                    method: 'GET',
+                    headers: {
+                        Authorization: token
+                    },
+                    success: function (response, options) {
+                        codearea.setValue(response.responseText);
+                        tab = tabs.add(codearea);
+                        tabs.setActiveTab(tab);
+                        if(language != null){
+                            codearea.setMode(language);
+                        }
+                    },
+                    failure: function (response, options) {
+                    }
+                });
+            /*    vartext.then(function(response){
                     codearea.setValue(response.responseText);
                     tab = tabs.add(codearea);
                     tabs.setActiveTab(tab);
                     if(language != null){
                         codearea.setMode(language);
                     }
-                });
+                });*/
             }
         }
         tabs.setActiveTab(tab);

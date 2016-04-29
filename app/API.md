@@ -101,6 +101,18 @@ move:
 { "log": "cpmv successfully!" }
 ```
 --------------------
+#### urlViewFile (URL: address.urlViewFile, Method: GET)
+**JSON Request content**
+```json
+{
+    "cmd": "view",
+    "path": "localfolder/index.html"
+}
+```
+**Response**
+Respond the content of the file. Get by response.responseText.
+
+--------------------
 #### urlSave (URL: address.urlSave, Method: POST)
 **JSON Request content**
 ```json
